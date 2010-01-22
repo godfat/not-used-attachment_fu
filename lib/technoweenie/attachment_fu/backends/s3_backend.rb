@@ -289,7 +289,7 @@ module Technoweenie # :nodoc:
           "http://" + cloudfront_distribution_domain + "/" + full_filename(thumbnail)
         end
         
-        def public_filename(*args)
+        def public_filename(args = nil)
           if attachment_options[:cloudfront]
             cloudfront_url(args)
           else
